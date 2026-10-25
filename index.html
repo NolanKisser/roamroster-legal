@@ -1,4 +1,146 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>RoamRoster legal</title>
-<meta http-equiv="refresh" content="0; url=privacy.html"></head>
-<body><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoamRoster</title>
+<meta name="description" content="A travel game where you unlock real places by standing in them, earn prestige for the cities and countries you explore, and share the trip with friends.">
+<meta property="og:title" content="RoamRoster">
+<meta property="og:description" content="Unlock real places by being there.">
+<meta property="og:image" content="https://nolankisser.github.io/roamroster-legal/logo-mark.png">
+<link rel="icon" href="logo-mark.png">
+<!--
+  Source of truth for https://nolankisser.github.io/roamroster-legal/ (the
+  App Store marketing URL). Edit here, then copy it and logo-mark.png to the
+  roamroster-legal repo to publish.
+-->
+<style>
+  :root {
+    --bg: #F7F3EC; --surface: #FFFFFF; --ink: #1F2A26; --ink-dim: #4E5B55;
+    --rule: #E3DACB; --pine: #2D5F4D; --clay: #A5532F;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 880px; margin: 0 auto; padding: 56px 20px 80px; }
+  a { color: var(--pine); text-underline-offset: 2px; }
+
+  .hero { text-align: center; padding-bottom: 40px; border-bottom: 1px solid var(--rule); }
+  .hero img { width: 120px; height: 120px; border-radius: 50%; }
+  .brand { font-weight: 700; color: var(--pine); letter-spacing: .02em; margin-top: 14px; }
+  h1 { font-size: clamp(32px, 6vw, 46px); line-height: 1.12; margin: 8px auto 14px; max-width: 14em; }
+  .lede { color: var(--ink-dim); font-size: 18px; max-width: 34em; margin: 0 auto 24px; }
+  .status { display: inline-block; background: var(--surface); border: 1px solid var(--rule);
+    border-radius: 999px; padding: 8px 18px; font-size: 15px; color: var(--ink); }
+  .status strong { color: var(--pine); }
+
+  h2 { font-size: 24px; margin: 48px 0 8px; }
+  .section-lede { color: var(--ink-dim); margin: 0 0 20px; }
+
+  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); counter-reset: step; }
+  .steps li { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
+    padding: 18px; counter-increment: step; }
+  .steps li::before { content: counter(step); display: inline-grid; place-items: center;
+    width: 28px; height: 28px; border-radius: 50%; background: var(--pine); color: #fff;
+    font-weight: 700; font-size: 14px; margin-bottom: 10px; }
+  .steps h3, .features h3 { font-size: 17px; margin: 0 0 4px; }
+  .steps p, .features p { margin: 0; color: var(--ink-dim); font-size: 15px; }
+
+  .features { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .features div { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 18px; }
+  .features .icon { font-size: 24px; line-height: 1; margin-bottom: 10px; }
+
+  .callout { background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--pine);
+    border-radius: 10px; padding: 16px 18px; margin: 16px 0; }
+  .callout p { margin: 0; color: var(--ink); }
+
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 14px;
+    color: var(--ink-dim); display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
+  footer nav { display: flex; gap: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <img src="logo-mark.png" alt="RoamRoster logo: a compass over a globe">
+    <div class="brand">RoamRoster</div>
+    <h1>Unlock the world by being there.</h1>
+    <p class="lede">RoamRoster is a travel game for real trips. Stand at a landmark, tap Unlock, and it's yours.
+      Every place you visit builds prestige for its city and country, and your friends can follow along.</p>
+    <p class="status"><strong>Coming soon</strong> to the App Store for iPhone</p>
+  </section>
+
+  <h2>How it works</h2>
+  <p class="section-lede">No check-ins from the couch. Every unlock is checked on our server.</p>
+  <ol class="steps">
+    <li>
+      <h3>Go somewhere</h3>
+      <p>Open the map to see cities and landmarks near you, from world-famous sights to local favourites.</p>
+    </li>
+    <li>
+      <h3>Unlock it on the spot</h3>
+      <p>When you're actually there, tap Unlock. Your GPS position is checked once, then only the place and the
+        date are kept.</p>
+    </li>
+    <li>
+      <h3>Build your roster</h3>
+      <p>Earn XP and level up. Landmarks raise their city's prestige, and cities raise their country's.</p>
+    </li>
+  </ol>
+
+  <h2>What's inside</h2>
+  <div class="features">
+    <div>
+      <div class="icon" aria-hidden="true">🗺️</div>
+      <h3>A map of everywhere you've been</h3>
+      <p>Track your countries and continents, and see which cities you've only scratched the surface of.</p>
+    </div>
+    <div>
+      <div class="icon" aria-hidden="true">🏆</div>
+      <h3>Challenges, badges and streaks</h3>
+      <p>Take on challenges for bonus XP, collect badges, and keep a day streak going while you travel.</p>
+    </div>
+    <div>
+      <div class="icon" aria-hidden="true">👋</div>
+      <h3>Travel with friends</h3>
+      <p>Add friends, share your unlocks to a friends-only feed, and like and comment on theirs.</p>
+    </div>
+    <div>
+      <div class="icon" aria-hidden="true">📸</div>
+      <h3>A scrapbook of your trips</h3>
+      <p>Add your photos and they're placed on a personal timeline by the date they were taken.</p>
+    </div>
+    <div>
+      <div class="icon" aria-hidden="true">📍</div>
+      <h3>Put new places on the map</h3>
+      <p>Found somewhere special? Photograph it on the spot to suggest it. Once reviewed, anyone can unlock it.</p>
+    </div>
+    <div>
+      <div class="icon" aria-hidden="true">⭐</div>
+      <h3>A wishlist for next time</h3>
+      <p>Save the places you want to see so they're ready for your next trip.</p>
+    </div>
+  </div>
+
+  <h2>Fair play, and your privacy</h2>
+  <div class="callout">
+    <p>RoamRoster has no ads and no analytics trackers, and we don't sell your data. We don't keep a history of
+      where you've been, only which places you unlocked and when.
+      <a href="privacy.html">Read the privacy policy</a>.</p>
+  </div>
+
+  <h2>Get in touch</h2>
+  <p class="section-lede">Questions, feedback, or a place we're missing:
+    <a href="mailto:support@roamroster.world">support@roamroster.world</a></p>
+
+  <footer>
+    <span>© 2026 Nolan Kisser</span>
+    <nav>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
