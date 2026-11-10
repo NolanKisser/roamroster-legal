@@ -5,142 +5,299 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RoamRoster</title>
 <meta name="description" content="A travel game where you unlock real places by standing in them, earn prestige for the cities and countries you explore, and share the trip with friends.">
+<meta name="theme-color" content="#0A1B47">
 <meta property="og:title" content="RoamRoster">
 <meta property="og:description" content="Unlock real places by being there.">
 <meta property="og:image" content="https://nolankisser.github.io/roamroster-legal/logo-mark.png">
 <link rel="icon" href="logo-mark.png">
+<link rel="stylesheet" href="site.css">
 <!--
   Source of truth for https://nolankisser.github.io/roamroster-legal/ (the
-  App Store marketing URL). Edit here, then copy it and logo-mark.png to the
+  App Store marketing URL). Edit here, then copy the whole legal/ folder
+  (the three pages, site.css, logo-mark.png and screens/) to the
   roamroster-legal repo to publish.
+
+  screens/*.webp are 720px-wide copies of docs/screenshots/app-store/*.png.
+  The callout positions in the hero (the x and y values) are fractions of
+  screens/explore.webp, so re-measure them if that screenshot is replaced.
 -->
-<style>
-  :root {
-    --bg: #F7F3EC; --surface: #FFFFFF; --ink: #1F2A26; --ink-dim: #4E5B55;
-    --rule: #E3DACB; --pine: #2D5F4D; --clay: #A5532F;
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink);
-    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  main { max-width: 880px; margin: 0 auto; padding: 56px 20px 80px; }
-  a { color: var(--pine); text-underline-offset: 2px; }
-
-  .hero { text-align: center; padding-bottom: 40px; border-bottom: 1px solid var(--rule); }
-  .hero img { width: 120px; height: 120px; border-radius: 50%; }
-  .brand { font-weight: 700; color: var(--pine); letter-spacing: .02em; margin-top: 14px; }
-  h1 { font-size: clamp(32px, 6vw, 46px); line-height: 1.12; margin: 8px auto 14px; max-width: 14em; }
-  .lede { color: var(--ink-dim); font-size: 18px; max-width: 34em; margin: 0 auto 24px; }
-  .status { display: inline-block; background: var(--surface); border: 1px solid var(--rule);
-    border-radius: 999px; padding: 8px 18px; font-size: 15px; color: var(--ink); }
-  .status strong { color: var(--pine); }
-
-  h2 { font-size: 24px; margin: 48px 0 8px; }
-  .section-lede { color: var(--ink-dim); margin: 0 0 20px; }
-
-  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); counter-reset: step; }
-  .steps li { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
-    padding: 18px; counter-increment: step; }
-  .steps li::before { content: counter(step); display: inline-grid; place-items: center;
-    width: 28px; height: 28px; border-radius: 50%; background: var(--pine); color: #fff;
-    font-weight: 700; font-size: 14px; margin-bottom: 10px; }
-  .steps h3, .features h3 { font-size: 17px; margin: 0 0 4px; }
-  .steps p, .features p { margin: 0; color: var(--ink-dim); font-size: 15px; }
-
-  .features { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-  .features div { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 18px; }
-  .features .icon { font-size: 24px; line-height: 1; margin-bottom: 10px; }
-
-  .callout { background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--pine);
-    border-radius: 10px; padding: 16px 18px; margin: 16px 0; }
-  .callout p { margin: 0; color: var(--ink); }
-
-  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 14px;
-    color: var(--ink-dim); display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
-  footer nav { display: flex; gap: 16px; }
-</style>
 </head>
 <body>
-<main>
-  <section class="hero">
-    <img src="logo-mark.png" alt="RoamRoster logo: a compass over a globe">
-    <div class="brand">RoamRoster</div>
-    <h1>Unlock the world by being there.</h1>
-    <p class="lede">RoamRoster is a travel game for real trips. Stand at a landmark, tap Unlock, and it's yours.
-      Every place you visit builds prestige for its city and country, and your friends can follow along.</p>
-    <p class="status"><strong>Coming soon</strong> to the App Store for iPhone</p>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hero on-navy">
+  <div class="wrap">
+    <nav class="topbar" aria-label="Site">
+      <a class="brand" href="./" aria-label="RoamRoster home">
+        <img src="logo-mark.png" width="40" height="40" alt="">
+        <span><span class="roam">Roam</span>Roster</span>
+      </a>
+      <ul class="topnav">
+        <li class="in-page"><a href="#how">How it works</a></li>
+        <li class="in-page"><a href="#inside">What's inside</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1>You had to be there.</h1>
+        <p class="lede">RoamRoster is a travel game for real trips. Stand at a landmark, tap Unlock, and it's yours.
+          Every place you visit builds prestige for its city and country, and your friends can follow along.</p>
+        <div class="hero-actions">
+          <p class="status"><span class="status-dot" aria-hidden="true"></span><span><strong>Coming soon</strong> to the App Store for iPhone</span></p>
+          <a class="more" href="#how">See how it works
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v11M3.5 9 8 13.5 12.5 9"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="stage">
+        <svg class="contours" viewBox="0 0 1600 1600" aria-hidden="true">
+          <defs>
+            <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2BB6E0"/>
+              <stop offset="1" stop-color="#6DB04A"/>
+            </linearGradient>
+          </defs>
+          <circle class="ping" cx="800" cy="800" r="128"/>
+          <circle class="ping" cx="800" cy="800" r="128"/>
+          <circle cx="800" cy="800" r="214" opacity=".6"/>
+          <circle cx="800" cy="800" r="268" opacity=".42" stroke-dasharray="1 11"/>
+          <circle cx="800" cy="800" r="338" opacity=".46"/>
+          <circle cx="800" cy="800" r="424" opacity=".3" stroke-dasharray="1 11"/>
+          <circle cx="800" cy="800" r="526" opacity=".34"/>
+          <circle cx="800" cy="800" r="648" opacity=".24"/>
+          <circle cx="800" cy="800" r="780" opacity=".18" stroke-dasharray="1 11"/>
+        </svg>
+        <div class="phone">
+          <img src="screens/explore.webp" width="720" height="1564" fetchpriority="high"
+            alt="The RoamRoster Explore screen: level 7, 27 places unlocked, and a globe with green checks on the places already visited.">
+        </div>
+        <ul class="callouts">
+          <li style="--x:.955; --y:.065"><span class="co-line"></span><span class="co-text"><b>Day streak</b>Kept going while you travel.</span></li>
+          <li style="--x:.945; --y:.184"><span class="co-line"></span><span class="co-text"><b>XP and levels</b>Every unlock earns XP.</span></li>
+          <li style="--x:.766; --y:.5445"><span class="co-line"></span><span class="co-text"><b>Blue bookmark</b>A place saved to your wishlist.</span></li>
+          <li style="--x:.613; --y:.83"><span class="co-line"></span><span class="co-text"><b>Green check</b>A place you've unlocked.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="proof">
+    <div class="wrap proof-grid">
+      <div class="proof-copy">
+        <h2>No check-ins from the couch.</h2>
+        <p>Every unlock is decided on our server, not on your phone. When you tap Unlock, it checks:</p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 9.5"/></svg>Where you are</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 9.5"/></svg>How accurate your GPS position is</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 9.5"/></svg>Whether your phone reports a simulated location</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 9.5"/></svg>Whether you could have travelled there since your last unlock</li>
+        </ul>
+        <p>Your position is checked once. After that, only the place and the date are kept.</p>
+      </div>
+
+      <div class="diptych">
+        <figure>
+          <div class="phone">
+            <img src="screens/spoof-refused.webp" width="720" height="1564" loading="lazy"
+              alt="Notre-Dame Cathedral in the app, with a notice: this device is reporting a simulated location. Disable mock-location apps to unlock destinations.">
+          </div>
+          <figcaption class="refused">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="m7.2 7.2 5.6 5.6M12.8 7.2l-5.6 5.6"/></svg>
+            A simulated location is refused.
+          </figcaption>
+        </figure>
+        <figure>
+          <div class="phone">
+            <img src="screens/unlock-celebration.webp" width="720" height="1564" loading="lazy"
+              alt="The same place after a real visit: 235 XP earned, a Paris Icons challenge completed, and a prompt to post it to the feed.">
+          </div>
+          <figcaption class="unlocked">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="m6.6 10.4 2.3 2.3 4.5-4.9"/></svg>
+            Standing there, it's unlocked.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
   </section>
 
-  <h2>How it works</h2>
-  <p class="section-lede">No check-ins from the couch. Every unlock is checked on our server.</p>
-  <ol class="steps">
-    <li>
-      <h3>Go somewhere</h3>
-      <p>Open the map to see cities and landmarks near you, from world-famous sights to local favourites.</p>
-    </li>
-    <li>
-      <h3>Unlock it on the spot</h3>
-      <p>When you're actually there, tap Unlock. Your GPS position is checked once, then only the place and the
-        date are kept.</p>
-    </li>
-    <li>
-      <h3>Build your roster</h3>
-      <p>Earn XP and level up. Landmarks raise their city's prestige, and cities raise their country's.</p>
-    </li>
-  </ol>
+  <section class="route" id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <ol class="waypoints">
+        <li>
+          <h3>Go somewhere</h3>
+          <p>Open the map to see cities and landmarks near you, from world-famous sights to local favourites.</p>
+        </li>
+        <li>
+          <h3>Unlock it on the spot</h3>
+          <p>When you're actually there, tap Unlock. Your GPS position is checked once, then only the place and the
+            date are kept.</p>
+        </li>
+        <li>
+          <h3>Build your roster</h3>
+          <p>Earn XP and level up. Landmarks raise their city's prestige, and cities raise their country's.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
 
-  <h2>What's inside</h2>
-  <div class="features">
-    <div>
-      <div class="icon" aria-hidden="true">🗺️</div>
-      <h3>A map of everywhere you've been</h3>
-      <p>Track your countries and continents, and see which cities you've only scratched the surface of.</p>
+  <section class="inside" id="inside">
+    <div class="wrap inside-head">
+      <div>
+        <h2>What's inside</h2>
+        <p>Screens from the app, with a demo account.</p>
+      </div>
+      <div class="rail-nav" hidden>
+        <button type="button" data-dir="-1" aria-label="Show earlier screens">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 10H4M9 5l-5 5 5 5"/></svg>
+        </button>
+        <button type="button" data-dir="1" aria-label="Show more screens">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+        </button>
+      </div>
     </div>
-    <div>
-      <div class="icon" aria-hidden="true">🏆</div>
-      <h3>Challenges, badges and streaks</h3>
-      <p>Take on challenges for bonus XP, collect badges, and keep a day streak going while you travel.</p>
-    </div>
-    <div>
-      <div class="icon" aria-hidden="true">👋</div>
-      <h3>Travel with friends</h3>
-      <p>Add friends, share your unlocks to a friends-only feed, and like and comment on theirs.</p>
-    </div>
-    <div>
-      <div class="icon" aria-hidden="true">📸</div>
-      <h3>A scrapbook of your trips</h3>
-      <p>Add your photos and they're placed on a personal timeline by the date they were taken.</p>
-    </div>
-    <div>
-      <div class="icon" aria-hidden="true">📍</div>
-      <h3>Put new places on the map</h3>
-      <p>Found somewhere special? Photograph it on the spot to suggest it. Once reviewed, anyone can unlock it.</p>
-    </div>
-    <div>
-      <div class="icon" aria-hidden="true">⭐</div>
-      <h3>A wishlist for next time</h3>
-      <p>Save the places you want to see so they're ready for your next trip.</p>
-    </div>
-  </div>
 
-  <h2>Fair play, and your privacy</h2>
-  <div class="callout">
-    <p>RoamRoster has no ads and no analytics trackers, and we don't sell your data. We don't keep a history of
-      where you've been, only which places you unlocked and when.
-      <a href="privacy.html">Read the privacy policy</a>.</p>
-  </div>
+    <div class="rail" tabindex="0" role="region" aria-label="Screens from the app">
+      <figure class="shot">
+        <div class="phone"><img src="screens/globe.webp" width="720" height="1564" loading="lazy"
+          alt="A full-screen globe with pins for visited, in-range and saved places, and a search field."></div>
+        <figcaption>
+          <h3>A map of everywhere you've been</h3>
+          <p>Track your countries and continents, and see which cities you've only scratched the surface of.</p>
+        </figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img src="screens/challenges.webp" width="720" height="1564" loading="lazy"
+          alt="The Challenges screen, with sets such as Paris Icons, The Golden Route and Istanbul Classics, each showing progress and an XP bonus."></div>
+        <figcaption>
+          <h3>Challenges, badges and streaks</h3>
+          <p>Take on challenges for bonus XP, collect badges, and keep a day streak going while you travel.</p>
+        </figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img src="screens/feed.webp" width="720" height="1564" loading="lazy"
+          alt="The friend activity feed, with posts from friends who unlocked the Sydney Opera House and the Pyramids of Giza."></div>
+        <figcaption>
+          <h3>A friends-only feed</h3>
+          <p>Share your unlocks to a friends-only feed, and like and comment on theirs.</p>
+        </figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img src="screens/friends.webp" width="720" height="1564" loading="lazy"
+          alt="The Friends screen: a friend request, a list of friends with their countries and levels, and a Leaderboard tab."></div>
+        <figcaption>
+          <h3>Travel with friends</h3>
+          <p>Add friends, see where they've been, and compare progress on the leaderboards.</p>
+        </figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img src="screens/scrapbook-verdicts.webp" width="720" height="1564" loading="lazy"
+          alt="The Scrapbook timeline, with photos of Hagia Sophia and Santorini placed by date. One is marked Needs a look."></div>
+        <figcaption>
+          <h3>A scrapbook of your trips</h3>
+          <p>Add your photos and they're placed on a personal timeline by the date they were taken.</p>
+        </figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img src="screens/profile.webp" width="720" height="1564" loading="lazy"
+          alt="A profile showing level 7, 15 countries, 6 continents, a 4 day streak and 5 badges."></div>
+        <figcaption>
+          <h3>Your roster</h3>
+          <p>Your level, countries, continents, streak and badges, all earned from real visits.</p>
+        </figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img src="screens/roamy-tour.webp" width="720" height="1564" loading="lazy"
+          alt="Roamy, a blue panda in an explorer's cap, introducing itself in the first step of the tour."></div>
+        <figcaption>
+          <h3>Roamy, your guide</h3>
+          <p>A blue panda who is your first friend and shows you around. You can skip the tour.</p>
+        </figcaption>
+      </figure>
+    </div>
 
-  <h2>Get in touch</h2>
-  <p class="section-lede">Questions, feedback, or a place we're missing:
-    <a href="mailto:support@roamroster.world">support@roamroster.world</a></p>
+    <div class="wrap">
+      <div class="extras">
+        <div>
+          <svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9.5a2 2 0 0 1 2-2h2.6l1.5-2.5h6.8l1.5 2.5h2.6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2z"/><circle cx="13" cy="13.6" r="3.6"/></svg>
+          <h3>Put new places on the map</h3>
+          <p>Found somewhere special? Photograph it on the spot to suggest it. Once reviewed, anyone can unlock it.</p>
+        </div>
+        <div>
+          <svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5h12a1 1 0 0 1 1 1v16l-7-4.6-7 4.6v-16a1 1 0 0 1 1-1z"/></svg>
+          <h3>A wishlist for next time</h3>
+          <p>Save the places you want to see so they're ready for your next trip.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <span>© 2026 Nolan Kisser</span>
-    <nav>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-    </nav>
-  </footer>
+  <section class="pledge on-navy">
+    <div class="wrap pledge-grid">
+      <h2>Fair play, and your privacy</h2>
+      <div>
+        <ul>
+          <li>RoamRoster has no ads and no analytics trackers.</li>
+          <li>We don't sell your data.</li>
+          <li>We don't keep a history of where you've been, only which places you unlocked and when.</li>
+        </ul>
+        <a class="pledge-link" href="privacy.html">Read the privacy policy
+          <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer class="site-foot on-navy">
+  <div class="wrap">
+    <div class="foot-contact">
+      <h2>Get in touch</h2>
+      <p>Questions, feedback, or a place we're missing:
+        <a href="mailto:support@roamroster.world">support@roamroster.world</a></p>
+    </div>
+    <div class="foot-row">
+      <span>© 2026 Nolan Kisser</span>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Arrow buttons for the screenshot rail. Without JavaScript the rail still
+  // scrolls by touch, trackpad or keyboard, and the buttons stay hidden.
+  (function () {
+    var rail = document.querySelector('.rail');
+    var nav = document.querySelector('.rail-nav');
+    if (!rail || !nav) return;
+    var buttons = nav.querySelectorAll('button');
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)');
+    function sync() {
+      var max = rail.scrollWidth - rail.clientWidth;
+      buttons[0].disabled = rail.scrollLeft <= 2;
+      buttons[1].disabled = rail.scrollLeft >= max - 2;
+    }
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var shot = rail.querySelector('.shot');
+        var step = (shot.getBoundingClientRect().width + parseFloat(getComputedStyle(rail).columnGap || 24)) * 2;
+        rail.scrollBy({ left: step * Number(button.dataset.dir), behavior: calm.matches ? 'auto' : 'smooth' });
+      });
+    });
+    rail.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    nav.hidden = false;
+    sync();
+  })();
+</script>
 </body>
 </html>
